@@ -16,3 +16,14 @@ array = [1,3,2,5,5,2,1]
 uniq_array = array.uniq!
 p array - uniq_array
 [1, 3, 2, 5, 5, 2, 1] - [1, 2, 3]
+
+# array.include?(array[i])
+# array.select{}
+
+# array.sort!{|x, y| }
+
+injected_array = array.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
+p injected_array
+p injected_array[3]
+# if injected_array[i].value == 1
+#   return injected_array[i]
