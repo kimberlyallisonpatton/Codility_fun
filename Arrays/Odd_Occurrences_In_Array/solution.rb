@@ -23,7 +23,5 @@ p array - uniq_array
 # array.sort!{|x, y| }
 
 injected_array = array.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
-p injected_array
-p injected_array[3]
-# if injected_array[i].value == 1
-#   return injected_array[i]
+
+injected_array.each {|key, value| puts key if value == 1}
