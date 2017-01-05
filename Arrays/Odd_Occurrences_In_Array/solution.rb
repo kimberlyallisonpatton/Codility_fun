@@ -1,3 +1,13 @@
+# Best solution so far, 80% Correctness, 100% Performance, and 88% overall.
+def solution(a)
+  grouped_array = a.group_by{|x| x}.values
+  answer = grouped_array.select!{|x| x.length.odd?}
+  answer.first[0]
+end
+
+
+
+
 def solution(a)
 	array_to_string = a.join
 	i = 0 
