@@ -21,7 +21,8 @@ p array - uniq_array
 # array.select{}
 
 # array.sort!{|x, y| }
-
-injected_array = array.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
-
-injected_array.each {|key, value| puts key if value == 1}
+def solution(a)		
+	injected_array = a.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
+	answer_array = injected_array.drop_while {|key, value| key if value != 1}
+	answer_array[0][0]
+end
