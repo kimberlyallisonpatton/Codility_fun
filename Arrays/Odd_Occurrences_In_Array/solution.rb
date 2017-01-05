@@ -17,11 +17,23 @@ uniq_array = array.uniq!
 p array - uniq_array
 [1, 3, 2, 5, 5, 2, 1] - [1, 2, 3]
 
-# array.include?(array[i])
-# array.select{}
+# Better solution, but still lacking in performance. Correctness is 80% and Performance 50% for a combined score of 66%.
+def solution(a)		
+	injected_array = a.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
+	answer_array = injected_array.drop_while {|key, value| key if value != 1}
+	answer_array[0][0]
+end
 
-# array.sort!{|x, y| }
+# Same results as previous solution.
+def solution(a)		
+	injected_array = a.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
+	answer_array = injected_array.map {|key, value| key if value == 1}
+	answer_array.compact!
+	return answer_array[0]
+end
 
-injected_array = array.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
-
-injected_array.each {|key, value| puts key if value == 1}
+def solution(a)
+  grouped_array = a.group_by{|x| x}.values
+  answer = grouped_array.min{|x, y| x.length <=> y.length}
+  return answer[0]
+end
