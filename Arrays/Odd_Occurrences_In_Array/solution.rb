@@ -31,3 +31,9 @@ def solution(a)
 	answer_array.compact!
 	return answer_array[0]
 end
+
+def solution(a)
+  grouped_array = a.group_by{|x| x}.values
+  answer = grouped_array.min{|x, y| x.length <=> y.length}
+  return answer[0]
+end
