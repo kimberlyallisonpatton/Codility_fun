@@ -34,6 +34,11 @@ end
 
 def solution(a)
   grouped_array = a.group_by{|x| x}.values
+  answer = grouped_array.map{|x| return x[0] if x.length == 1}
+end
+
+def solution(a)
+  grouped_array = a.group_by{|x| x}.values
   answer = grouped_array.min{|x, y| x.length <=> y.length}
   return answer[0]
 end
