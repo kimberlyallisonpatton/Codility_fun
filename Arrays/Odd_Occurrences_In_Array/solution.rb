@@ -23,3 +23,11 @@ def solution(a)
 	answer_array = injected_array.drop_while {|key, value| key if value != 1}
 	answer_array[0][0]
 end
+
+# Same results as previous solution.
+def solution(a)		
+	injected_array = a.inject(Hash.new(0)) { |h, e| h[e] += 1 ; h }
+	answer_array = injected_array.map {|key, value| key if value == 1}
+	answer_array.compact!
+	return answer_array[0]
+end
