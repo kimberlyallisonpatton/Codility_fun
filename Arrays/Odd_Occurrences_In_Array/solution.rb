@@ -5,7 +5,7 @@ def solution(a)
   answer.first[0]
 end
 
-
+# Trying to fix problem with arrays that have only one number. 
 
 
 def solution(a)
