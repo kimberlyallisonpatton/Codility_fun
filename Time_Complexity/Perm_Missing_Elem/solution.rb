@@ -1,4 +1,4 @@
-# Checking solution for performance.
+# Need to solve for missing first or last elements.
 def solution(a)
   p a.sort!
   # p a.detect{|x| x == 3}
