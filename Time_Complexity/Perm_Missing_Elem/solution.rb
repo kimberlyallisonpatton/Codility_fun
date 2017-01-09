@@ -16,7 +16,7 @@ end
 
 def solution(a)
   a.sort!
-  a.
+  a.next
 end
 
 # possible start of solution
