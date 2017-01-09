@@ -13,3 +13,22 @@ def solution(a)
     end
   end
 end
+
+def solution(a)
+  a.sort!
+  a.
+end
+
+# possible start of solution
+# def solution(a)
+#   p res = a.reduce(:+)
+#   p len = a.length
+#   p arr = []
+#     p a.each do |f|
+#     if len > 1
+#       res = res - (f*2)
+#       p arr << res.abs
+#     end
+#   end
+#   return arr.min
+# end
