@@ -16,7 +16,15 @@ end
 
 def solution(a)
   a.sort!
-  a.next
+  i += 0
+  until i == a.length
+	  if a[i].next - a[1] == 2
+	  	return a[i] + 1
+	  	break
+	  else
+	  	i += 1
+	  end
+	end
 end
 
 # possible start of solution
