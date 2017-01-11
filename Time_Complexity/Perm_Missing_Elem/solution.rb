@@ -27,6 +27,13 @@ def solution(a)
 	end
 end
 
+# {Number of pairs * Sum of each pair} = 
+# (\frac{n}{2})(n+1) = \frac{n(n+1)}{2}}
+
+# {\text{Number of pairs * Sum of each pair} = 
+# (\frac{n + 1}{2})(n) = \frac{n(n+1)}{2}}
+
+
 # possible start of solution
 # def solution(a)
 #   p res = a.reduce(:+)
