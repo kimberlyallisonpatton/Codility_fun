@@ -32,7 +32,7 @@ end
 
 # {\text{Number of pairs * Sum of each pair} = 
 # (\frac{n + 1}{2})(n) = \frac{n(n+1)}{2}}
-
+# Techniques for adding the numbers 1 to 100
 
 # possible start of solution
 # def solution(a)
