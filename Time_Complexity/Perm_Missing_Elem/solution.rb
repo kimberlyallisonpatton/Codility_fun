@@ -1,3 +1,17 @@
+def solution(a)
+  sorted = a.sort!
+  i = 0
+  while i < sorted.length  
+    if sorted == [] || sorted[0] == 2 
+      return 1
+    elsif sorted[i] + 1 == sorted[i+1]
+      i += 1
+    else
+      return sorted[i] + 1
+    end
+  end
+end
+
 # 90% Solve for missing first or last elements
 def solution(a)
   sorted = a.sort!
