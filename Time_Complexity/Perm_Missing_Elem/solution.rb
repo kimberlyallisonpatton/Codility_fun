@@ -1,3 +1,7 @@
+def solution(a)
+  a.sort.each_cons(2).all? {|x, y| y == x + 1}
+end
+
 # Need to solve for missing first or last elements.
 def solution(a)
   p a.sort!
@@ -47,3 +51,13 @@ end
 #   end
 #   return arr.min
 # end
+
+def solution(a)
+  sumAll = 0
+  sumLess = 0
+  for i in 0..a.length + 1
+    sumLess += (a[i] || 0)
+    sumAll += i
+  end
+  sumAll - sumLess
+ends
