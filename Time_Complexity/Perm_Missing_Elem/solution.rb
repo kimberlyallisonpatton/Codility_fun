@@ -1,3 +1,33 @@
+# 90% Solve for missing first or last elements
+def solution(a)
+  sorted = a.sort!
+  i = 0
+  while i < sorted.length  
+    if sorted[i] + 1 == sorted[i+1]
+      i += 1  
+    else
+      return sorted[i] + 1
+    end
+  end
+end
+
+#Handles the first number missing edge case
+def solution(a)
+  p sorted = a.sort!
+  i = 0
+  while i < sorted.length  
+    if sorted[0] == 2  
+      return 1
+    elsif sorted[i] + 1 == sorted[i+1]
+      i += 1
+    else
+      return sorted[i] + 1
+    end
+  end
+end
+
+
+
 def solution(a)
   a.sort.each_cons(2).all? {|x, y| y == x + 1}
 end
